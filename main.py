@@ -5,9 +5,8 @@ from werkzeug.utils import secure_filename
 
 
 app = Flask(__name__)
-
-
 @app.route('/')
+
 def upload_form():
     return render_template('upload.html')
 
@@ -32,7 +31,7 @@ def upload_video():
              result.write(grey)
              video_file = 'blackandwhite.mp4'
     except:
-        print("Completed reading all the Frames from the Video") 
+        print("Completed reading all the Frames from the Video")
 
     return render_template('upload.html', filename=filename)         
  
